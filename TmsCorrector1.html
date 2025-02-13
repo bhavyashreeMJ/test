@@ -1,2 +1,34 @@
-TradeDate, RecordType, FirmRoeID, Symbol, Side, OrderType, OrderID, Instructions, FirmDesignatedID, RoutedOrderID, EventTimeStamp, Quantity, Destination, ActionType, ReportedRecord, IsSubmitted, Jobkey, DataSource
-{"actionType":"COR","firmROEID":"20240607_MEOR_118117807_32993","type":"MEOR","CATReporterIMID":"BGWM","orderKeyDate":"20240401T000000.000000","orderID":"508919657","symbol":"DRI","eventTimestamp":"20240607T090953.392","manualFlag":false,"electronicDupFlag":false,"senderIMID":"104474:BGWM","destination":"7560:PERS","destinationType":"F","routedOrderID":"118117807","side":"SL","price":193.00000000,"quantity":34,"orderType":"LMT","timeInForce":{"DAY":20240607},"tradingSession":"REG","affiliateFlag":false,"isoInd":"NA","routeRejectedFlag":false,"dupROIDCond":false,"multiLegInd":false}
+using System.Collections.Generic;
+
+namespace CommonObjects
+{
+    public class ReportedRecord
+    {
+        public string actionType { get; set; }
+        public string firmROEID { get; set; }
+        public string type { get; set; }
+        public string CATReporterIMID { get; set; }
+        public string orderKeyDate { get; set; }
+        public string orderID { get; set; }
+        public string symbol { get; set; }
+        public string eventTimestamp { get; set; }
+        public bool manualFlag { get; set; }
+        public bool electronicDupFlag { get; set; }
+        public string senderIMID { get; set; }
+        public string destination { get; set; }
+        public string destinationType { get; set; }
+        public string routedOrderID { get; set; }
+        public string side { get; set; }
+        public decimal price { get; set; }
+        public int quantity { get; set; }
+        public string orderType { get; set; }
+        // Example: "timeInForce":{"DAY":20240607}
+        public Dictionary<string, int> timeInForce { get; set; }
+        public string tradingSession { get; set; }
+        public bool affiliateFlag { get; set; }
+        public string isoInd { get; set; }
+        public bool routeRejectedFlag { get; set; }
+        public bool dupROIDCond { get; set; }
+        public bool multiLegInd { get; set; }
+    }
+}
