@@ -1,0 +1,50 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>CatReport Display</title>
+    <link href="Content/styles.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/scripts.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <h2>CatReport Record</h2>
+            <div class="field">
+                <asp:Label ID="lblActionType" runat="server" Text="Action Type:" AssociatedControlID="txtActionType"></asp:Label>
+                <asp:TextBox ID="txtActionType" runat="server" ReadOnly="true" />
+            </div>
+            <div class="field">
+                <asp:Label ID="lblFirmROEID" runat="server" Text="Firm ROEID:" AssociatedControlID="txtFirmROEID"></asp:Label>
+                <asp:TextBox ID="txtFirmROEID" runat="server" ReadOnly="true" />
+            </div>
+            <div class="field">
+                <asp:Label ID="lblType" runat="server" Text="Type:" AssociatedControlID="txtType"></asp:Label>
+                <asp:TextBox ID="txtType" runat="server" ReadOnly="true" />
+            </div>
+            <div class="field">
+                <asp:Label ID="lblCATReporterIMID" runat="server" Text="CAT Reporter IMID:" AssociatedControlID="txtCATReporterIMID"></asp:Label>
+                <asp:TextBox ID="txtCATReporterIMID" runat="server" ReadOnly="true" />
+            </div>
+            <div class="field">
+                <asp:Label ID="lblOrderID" runat="server" Text="Order ID:" AssociatedControlID="txtOrderID"></asp:Label>
+                <asp:TextBox ID="txtOrderID" runat="server" ReadOnly="true" />
+            </div>
+            <div class="field">
+                <asp:Label ID="lblSymbol" runat="server" Text="Symbol:" AssociatedControlID="txtSymbol"></asp:Label>
+                <asp:TextBox ID="txtSymbol" runat="server" ReadOnly="true" />
+            </div>
+            <div class="field">
+                <asp:Label ID="lblEventTimestamp" runat="server" Text="Event Timestamp:" AssociatedControlID="txtEventTimestamp"></asp:Label>
+                <asp:TextBox ID="txtEventTimestamp" runat="server" ReadOnly="true" />
+            </div>
+            <div class="field">
+                <asp:Label ID="lblQuantity" runat="server" Text="Quantity:" AssociatedControlID="txtQuantity"></asp:Label>
+                <asp:TextBox ID="txtQuantity" runat="server" ReadOnly="true" />
+            </div>
+            <!-- Add more fields as needed -->
+        </div>
+    </form>
+</body>
+</html>

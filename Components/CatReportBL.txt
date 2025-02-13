@@ -1,0 +1,30 @@
+using CommonObjects;
+using DataLayer;
+using Newtonsoft.Json;
+
+namespace BusinessLayer
+{
+    public class CatReportBL
+    {
+        private readonly CatReportDAL _dal;
+
+        public CatReportBL(string connectionString)
+        {
+            _dal = new CatReportDAL(connectionString);
+        }
+
+        /// <summary>
+        /// Gets the ReportedRecord object by retrieving the JSON from the data layer and deserializing it.
+        /// </summary>
+        public ReportedRecord GetReportedRecord()
+        {
+            string json = _dal.GetReportedRecord();
+            if (!string.IsNullOrEmpty(json))
+            {
+                ReportedRecord record = JsonConvert.DeserializeObject<ReportedRecord>(json);
+                return record;
+            }
+            return null;
+        }
+    }
+}

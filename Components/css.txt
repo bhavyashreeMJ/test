@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f2f2f2;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    width: 600px;
+    margin: auto;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field label {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+}
+
+.field input[type="text"] {
+    width: 400px;
+    padding: 5px;
+}

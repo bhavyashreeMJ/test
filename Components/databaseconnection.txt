@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <connectionStrings>
+    <add name="CatReportConnection"
+         connectionString="Data Source=YOUR_SERVER;Initial Catalog=YOUR_DATABASE;Integrated Security=True;"
+         providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <system.web>
+    <compilation debug="true" targetFramework="4.7.2" />
+    <!-- Other configuration settings -->
+  </system.web>
+</configuration>

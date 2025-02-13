@@ -1,0 +1,38 @@
+using System.Data.SqlClient;
+
+namespace DataLayer
+{
+    public class CatReportDAL
+    {
+        private readonly string _connectionString;
+
+        public CatReportDAL(string connectionString)
+        {
+            _connectionString = connectionString;
+        }
+
+        /// <summary>
+        /// Retrieves a single ReportedRecord JSON string from the catreport table.
+        /// Adjust the query as per your requirements.
+        /// </summary>
+        public string GetReportedRecord()
+        {
+            string jsonResult = string.Empty;
+            string query = "SELECT TOP 1 ReportedRecord FROM catreport ORDER BY TradeDate DESC";
+
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        jsonResult = result.ToString();
+                    }
+                }
+            }
+            return jsonResult;
+        }
+    }
+}
