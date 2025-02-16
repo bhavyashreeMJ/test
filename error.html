@@ -3,6 +3,70 @@
 
 TradeDate, RecordType, FirmRoeID, Symbol, Side, OrderType, OrderID, Instructions, FirmDesignatedID, RoutedOrderID, EventTimeStamp, Quantity, Destination, ActionType, ReportedRecord, IsSubmitted, Jobkey, DataSource
 
+
+-- 1️⃣ Add Persisted Computed Columns
+ALTER TABLE Corrector 
+ADD ParsedActionType AS JSON_VALUE(ReportedRecord, '$.actionType') PERSISTED,
+    ParsedOrderID AS JSON_VALUE(ReportedRecord, '$.orderID') PERSISTED,
+    ParsedSymbol AS JSON_VALUE(ReportedRecord, '$.symbol') PERSISTED;
+
+-- 2️⃣ Create Indexes
+CREATE INDEX IDX_ActionType ON Corrector(ParsedActionType);
+CREATE INDEX IDX_OrderID ON Corrector(ParsedOrderID);
+CREATE INDEX IDX_Symbol ON Corrector(ParsedSymbol);
+CREATE INDEX IDX_FirmRoeID ON Corrector(FirmRoeID);
+CREATE INDEX IDX_TradeDate ON Corrector(TradeDate);
+CREATE INDEX IDX_RecordType ON Corrector(RecordType);
+CREATE INDEX IDX_Side ON Corrector(Side);
+
+-- 3️⃣ Optimized Stored Procedure
+ALTER PROCEDURE GetFilteredCorrectorRecords
+    @ActionType NVARCHAR(10),  
+    @FirmRoeID NVARCHAR(50),   
+    @TradeDate DATE,           
+    @RecordType NVARCHAR(20),  
+    @OrderID NVARCHAR(50),     
+    @Symbol NVARCHAR(10),      
+    @Side NVARCHAR(10)         
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        TradeDate,             
+        RecordType,            
+        FirmRoeID,             
+        Symbol,                
+        Side,                  
+        OrderType,             
+        OrderID,               
+        Instructions,          
+        FirmDesignatedID,      
+        RoutedOrderID,         
+        EventTimeStamp,        
+        Quantity,              
+        Destination,           
+        ActionType,            
+        IsSubmitted,           
+        Jobkey,                
+        DataSource,
+        ParsedActionType,
+        ParsedOrderID,
+        ParsedSymbol
+    FROM Corrector
+    WHERE 
+        ParsedActionType = @ActionType
+        AND FirmRoeID = @FirmRoeID
+        AND TradeDate = @TradeDate
+        AND RecordType = @RecordType
+        AND ParsedOrderID = @OrderID
+        AND ParsedSymbol = @Symbol
+        AND Side = @Side;
+END;
+
+
+
+=========================================================================
 ALTER TABLE Corrector 
 ADD ParsedActionType AS JSON_VALUE(ReportedRecord, '$.actionType') PERSISTED,
     ParsedOrderID AS JSON_VALUE(ReportedRecord, '$.orderID') PERSISTED,
