@@ -3,6 +3,74 @@
 
 TradeDate, RecordType, FirmRoeID, Symbol, Side, OrderType, OrderID, Instructions, FirmDesignatedID, RoutedOrderID, EventTimeStamp, Quantity, Destination, ActionType, ReportedRecord, IsSubmitted, Jobkey, DataSource
 
+CREATE INDEX IDX_ActionType ON Corrector(ParsedActionType);
+CREATE INDEX IDX_OrderID ON Corrector(ParsedOrderID);
+CREATE INDEX IDX_Symbol ON Corrector(ParsedSymbol);
+CREATE INDEX IDX_Quantity ON Corrector(ParsedQuantity);
+CREATE INDEX IDX_Destination ON Corrector(ParsedDestination);
+
+ALTER PROCEDURE GetFilteredCorrectorRecords
+    @ActionType NVARCHAR(10),  -- NEW, COR, or DEL (Mandatory)
+    @FirmRoeID NVARCHAR(50),   -- Mandatory
+    @TradeDate DATE,           -- Mandatory
+    @RecordType NVARCHAR(20),  -- Mandatory
+    @OrderID NVARCHAR(50),     -- Mandatory
+    @Symbol NVARCHAR(10),      -- Mandatory
+    @Side NVARCHAR(10)         -- Mandatory
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Use indexed computed columns for filtering
+    SELECT 
+        TradeDate,             
+        RecordType,            
+        FirmRoeID,             
+        Symbol,                
+        Side,                  
+        OrderType,             
+        OrderID,               
+        Instructions,          
+        FirmDesignatedID,      
+        RoutedOrderID,         
+        EventTimeStamp,        
+        Quantity,              
+        Destination,           
+        ActionType,            
+        IsSubmitted,           
+        Jobkey,                
+        DataSource,
+        
+        -- Use computed columns instead of JSON_VALUE()
+        ParsedActionType,
+        ParsedOrderID,
+        ParsedSymbol,
+        ParsedQuantity,
+        ParsedDestination
+    FROM Corrector
+    WHERE 
+        ParsedActionType = @ActionType
+        AND FirmRoeID = @FirmRoeID
+        AND TradeDate = @TradeDate
+        AND RecordType = @RecordType
+        AND ParsedOrderID = @OrderID
+        AND ParsedSymbol = @Symbol
+        AND Side = @Side;
+END;
+
+
+EXEC GetFilteredCorrectorRecords 
+    @ActionType = 'COR', 
+    @FirmRoeID = '123456', 
+    @TradeDate = '2024-02-16', 
+    @RecordType = 'Type_A', 
+    @OrderID = '987654', 
+    @Symbol = 'AAPL', 
+    @Side = 'BUY';
+
+
+==============================================================================
+
 
 CREATE PROCEDURE GetFilteredCorrectorRecords
     @ActionType NVARCHAR(10),  -- 'NEW', 'COR', 'DEL'
