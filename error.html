@@ -2,3 +2,59 @@
 
 
 TradeDate, RecordType, FirmRoeID, Symbol, Side, OrderType, OrderID, Instructions, FirmDesignatedID, RoutedOrderID, EventTimeStamp, Quantity, Destination, ActionType, ReportedRecord, IsSubmitted, Jobkey, DataSource
+
+
+CREATE PROCEDURE GetFilteredCorrectorRecords
+    @ActionType NVARCHAR(10),  -- 'NEW', 'COR', 'DEL'
+    @FirmRoeID NVARCHAR(50) = NULL,
+    @TradeDate DATE = NULL,
+    @RecordType NVARCHAR(20) = NULL,
+    @OrderID NVARCHAR(50) = NULL,
+    @Symbol NVARCHAR(10) = NULL,
+    @Side NVARCHAR(10) = NULL
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Fetch and filter records based on input parameters
+    SELECT 
+        TradeDate,
+        RecordType,
+        FirmRoeID,
+        Symbol,
+        Side,
+        OrderType,
+        OrderID,
+        Instructions,
+        FirmDesignatedID,
+        RoutedOrderID,
+        EventTimeStamp,
+        Quantity,
+        Destination,
+        ActionType,
+        IsSubmitted,
+        Jobkey,
+        DataSource,
+        
+        -- Parse JSON if COR or DEL
+        CASE 
+            WHEN ActionType IN ('COR', 'DEL') THEN 
+                JSON_VALUE(ReportedRecord, '$.actionType') AS ParsedActionType,
+                JSON_VALUE(ReportedRecord, '$.firmROEID') AS ParsedFirmROEID,
+                JSON_VALUE(ReportedRecord, '$.orderID') AS ParsedOrderID,
+                JSON_VALUE(ReportedRecord, '$.symbol') AS ParsedSymbol,
+                JSON_VALUE(ReportedRecord, '$.eventTimestamp') AS ParsedEventTimestamp,
+                JSON_VALUE(ReportedRecord, '$.quantity') AS ParsedQuantity,
+                JSON_VALUE(ReportedRecord, '$.destination') AS ParsedDestination
+            ELSE NULL
+        END AS ParsedData
+    FROM Corrector
+    WHERE 
+        ActionType = @ActionType
+        AND (@FirmRoeID IS NULL OR FirmRoeID = @FirmRoeID)
+        AND (@TradeDate IS NULL OR TradeDate = @TradeDate)
+        AND (@RecordType IS NULL OR RecordType = @RecordType)
+        AND (@OrderID IS NULL OR OrderID = @OrderID)
+        AND (@Symbol IS NULL OR Symbol = @Symbol)
+        AND (@Side IS NULL OR Side = @Side);
+END;
