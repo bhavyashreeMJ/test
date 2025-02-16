@@ -4,6 +4,15 @@
 TradeDate, RecordType, FirmRoeID, Symbol, Side, OrderType, OrderID, Instructions, FirmDesignatedID, RoutedOrderID, EventTimeStamp, Quantity, Destination, ActionType, ReportedRecord, IsSubmitted, Jobkey, DataSource
 
 
+ALTER TABLE Corrector 
+DROP COLUMN ParsedActionType, ParsedOrderID, ParsedSymbol; -- Drop old computed columns
+
+ALTER TABLE Corrector 
+ADD ParsedActionType AS CAST(JSON_VALUE(ReportedRecord, '$.actionType') AS NVARCHAR(255)) PERSISTED,
+    ParsedOrderID AS CAST(JSON_VALUE(ReportedRecord, '$.orderID') AS NVARCHAR(255)) PERSISTED,
+    ParsedSymbol AS CAST(JSON_VALUE(ReportedRecord, '$.symbol') AS NVARCHAR(255)) PERSISTED;
+
+
 -- 1️⃣ Add Persisted Computed Columns
 ALTER TABLE Corrector 
 ADD ParsedActionType AS JSON_VALUE(ReportedRecord, '$.actionType') PERSISTED,
