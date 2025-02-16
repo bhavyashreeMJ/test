@@ -3,6 +3,15 @@
 
 TradeDate, RecordType, FirmRoeID, Symbol, Side, OrderType, OrderID, Instructions, FirmDesignatedID, RoutedOrderID, EventTimeStamp, Quantity, Destination, ActionType, ReportedRecord, IsSubmitted, Jobkey, DataSource
 
+ALTER TABLE Corrector 
+ADD ParsedActionType AS JSON_VALUE(ReportedRecord, '$.actionType') PERSISTED,
+    ParsedOrderID AS JSON_VALUE(ReportedRecord, '$.orderID') PERSISTED,
+    ParsedSymbol AS JSON_VALUE(ReportedRecord, '$.symbol') PERSISTED,
+    ParsedQuantity AS JSON_VALUE(ReportedRecord, '$.quantity') PERSISTED,
+    ParsedDestination AS JSON_VALUE(ReportedRecord, '$.destination') PERSISTED;
+
+
+
 CREATE INDEX IDX_ActionType ON Corrector(ParsedActionType);
 CREATE INDEX IDX_OrderID ON Corrector(ParsedOrderID);
 CREATE INDEX IDX_Symbol ON Corrector(ParsedSymbol);
