@@ -1,0 +1,449 @@
+Ticker,Sector
+AAL,Industrials
+AAP,Consumer Cyclical
+AAPL,Technology
+ABBV,Healthcare
+ABC,Error retrieving data
+ABT,Healthcare
+ADBE,Technology
+ADI,Technology
+ADM,Consumer Defensive
+ADS,N/A
+ADSK,Technology
+AEE,Utilities
+AEP,Utilities
+AFL,Financial Services
+AIG,Financial Services
+AIV,Real Estate
+AIZ,Financial Services
+AJG,Financial Services
+AKAM,Technology
+ALB,Basic Materials
+ALK,Industrials
+ALL,Financial Services
+ALLE,Industrials
+ALXN,N/A
+AMAT,Technology
+AME,Industrials
+AMG,Financial Services
+AMGN,Healthcare
+AMP,Financial Services
+AMT,Real Estate
+AMZN,Consumer Cyclical
+AN,Consumer Cyclical
+ANTM,N/A
+AON,Financial Services
+APA,Energy
+APC,Error retrieving data
+APD,Basic Materials
+APH,Technology
+ARNC,Error retrieving data
+ATVI,Error retrieving data
+AVB,Real Estate
+AVGO,Technology
+AVY,Consumer Cyclical
+AWK,Utilities
+AXP,Financial Services
+AYI,Industrials
+AZO,Consumer Cyclical
+BA,Industrials
+BAC,Financial Services
+BAX,Healthcare
+BBBY,N/A
+BBT,Error retrieving data
+BBY,Consumer Cyclical
+BCR,N/A
+BDX,Healthcare
+BHI,N/A
+BIIB,Healthcare
+BK,Financial Services
+BLL,N/A
+BMY,Healthcare
+BSX,Healthcare
+BWA,Consumer Cyclical
+BXP,Real Estate
+C,Financial Services
+CAG,Consumer Defensive
+CAH,Healthcare
+CAT,Industrials
+CB,Financial Services
+CBG,N/A
+CCI,Real Estate
+CCL,Consumer Cyclical
+CELG,Error retrieving data
+CERN,N/A
+CF,Basic Materials
+CFG,Financial Services
+CHD,Consumer Defensive
+CHK,Error retrieving data
+CHRW,Industrials
+CHTR,Communication Services
+CI,Healthcare
+CINF,Financial Services
+CL,Consumer Defensive
+CLX,Consumer Defensive
+CMA,Financial Services
+CME,Financial Services
+CMG,Consumer Cyclical
+CMI,Industrials
+CMS,Utilities
+CNC,Healthcare
+CNP,Utilities
+COF,Financial Services
+COG,N/A
+COL,N/A
+COO,Healthcare
+COST,Consumer Defensive
+COTY,Consumer Defensive
+CPB,Consumer Defensive
+CRM,Technology
+CSCO,Technology
+CSRA,N/A
+CSX,Industrials
+CTAS,Industrials
+CTL,N/A
+CTSH,Technology
+CTXS,N/A
+CVS,Healthcare
+CVX,Energy
+CXO,N/A
+D,Utilities
+DAL,Industrials
+DD,Basic Materials
+DE,Industrials
+DFS,Financial Services
+DG,Consumer Defensive
+DGX,Healthcare
+DHI,Consumer Cyclical
+DHR,Healthcare
+DIS,Communication Services
+DISCA,N/A
+DISCK,N/A
+DLPH,N/A
+DLR,Real Estate
+DLTR,Consumer Defensive
+DNB,Financial Services
+DOV,Industrials
+DPS,N/A
+DRI,Consumer Cyclical
+DUK,Utilities
+DVA,Healthcare
+DVN,Energy
+EA,Communication Services
+EBAY,Consumer Cyclical
+ECL,Basic Materials
+ED,Utilities
+EFX,Industrials
+EIX,Utilities
+EL,Consumer Defensive
+EMN,Basic Materials
+EMR,Industrials
+EOG,Energy
+EQIX,Real Estate
+EQR,Real Estate
+EQT,Energy
+ES,Utilities
+ESS,Real Estate
+ETFC,N/A
+ETN,Industrials
+ETR,Utilities
+EW,Healthcare
+EXC,Utilities
+EXPD,Industrials
+EXPE,Consumer Cyclical
+EXR,Real Estate
+F,Consumer Cyclical
+FAST,Industrials
+FB,N/A
+FBHS,N/A
+FCX,Basic Materials
+FDX,Industrials
+FE,Utilities
+FFIV,Technology
+FIS,Technology
+FISV,N/A
+FL,Consumer Cyclical
+FLIR,N/A
+FLR,Industrials
+FLS,Industrials
+FMC,Basic Materials
+FRT,Real Estate
+FSLR,Technology
+FTR,N/A
+GD,Industrials
+GGP,N/A
+GILD,Healthcare
+GIS,Consumer Defensive
+GLW,Technology
+GM,Consumer Cyclical
+GPC,Consumer Cyclical
+GPN,Industrials
+GPS,Error retrieving data
+GRMN,Technology
+GT,Consumer Cyclical
+GWW,Industrials
+HAL,Energy
+HAR,N/A
+HAS,Consumer Cyclical
+HBAN,Financial Services
+HBI,Consumer Cyclical
+HCA,Healthcare
+HCN,N/A
+HCP,Technology
+HD,Consumer Cyclical
+HES,Energy
+HIG,Financial Services
+HOG,Consumer Cyclical
+HOLX,Healthcare
+HON,Industrials
+HP,Energy
+HPE,Technology
+HPQ,Technology
+HRB,Consumer Cyclical
+HRL,Consumer Defensive
+HRS,Error retrieving data
+HSIC,Healthcare
+HST,Real Estate
+HSY,Consumer Defensive
+HUM,Healthcare
+IBM,Technology
+IDXX,Healthcare
+IFF,Basic Materials
+ILMN,Healthcare
+INTC,Technology
+INTU,Technology
+IP,Consumer Cyclical
+IPG,Communication Services
+IRM,Real Estate
+ISRG,Healthcare
+ITW,Industrials
+IVZ,Financial Services
+JBHT,Industrials
+JEC,N/A
+JNPR,Technology
+JPM,Financial Services
+JWN,Consumer Cyclical
+K,Consumer Defensive
+KEY,Financial Services
+KIM,Real Estate
+KLAC,Technology
+KMB,Consumer Defensive
+KMI,Energy
+KMX,Consumer Cyclical
+KO,Consumer Defensive
+KORS,N/A
+KR,Consumer Defensive
+KSS,Consumer Cyclical
+KSU,N/A
+LB,Energy
+LEG,Consumer Cyclical
+LEN,Consumer Cyclical
+LH,Healthcare
+LKQ,Consumer Cyclical
+LLL,Error retrieving data
+LLTC,N/A
+LLY,Healthcare
+LMT,Industrials
+LNT,Utilities
+LOW,Consumer Cyclical
+LRCX,Technology
+LUK,N/A
+LUV,Industrials
+LVLT,N/A
+LYB,Basic Materials
+M,Consumer Cyclical
+MA,Financial Services
+MAA,Real Estate
+MAC,Real Estate
+MAR,Consumer Cyclical
+MAS,Industrials
+MAT,Consumer Cyclical
+MCD,Consumer Cyclical
+MCHP,Technology
+MCK,Healthcare
+MCO,Financial Services
+MDLZ,Consumer Defensive
+MET,Financial Services
+MHK,Consumer Cyclical
+MJN,N/A
+MKC,Consumer Defensive
+MLM,Basic Materials
+MMC,Financial Services
+MMM,Industrials
+MNST,Consumer Defensive
+MO,Consumer Defensive
+MON,Error retrieving data
+MOS,Basic Materials
+MPC,Energy
+MRK,Healthcare
+MRO,N/A
+MSFT,Technology
+MTB,Financial Services
+MTD,Healthcare
+MU,Technology
+MUR,Energy
+MYL,N/A
+NAVI,Financial Services
+NBL,N/A
+NDAQ,Financial Services
+NEE,Utilities
+NEM,Basic Materials
+NFLX,Communication Services
+NFX,N/A
+NKE,Consumer Cyclical
+NLSN,N/A
+NOV,Energy
+NSC,Industrials
+NTAP,Technology
+NTRS,Financial Services
+NUE,Basic Materials
+NVDA,Technology
+NWL,Consumer Defensive
+NWS,Communication Services
+NWSA,Communication Services
+O,Real Estate
+OKE,Energy
+OMC,Communication Services
+ORLY,Consumer Cyclical
+OXY,Energy
+PAYX,Technology
+PBCT,N/A
+PBI,Industrials
+PCAR,Industrials
+PCG,Utilities
+PCLN,N/A
+PDCO,Healthcare
+PEG,Utilities
+PEP,Consumer Defensive
+PFE,Healthcare
+PFG,Financial Services
+PG,Consumer Defensive
+PGR,Financial Services
+PH,Industrials
+PHM,Consumer Cyclical
+PKI,N/A
+PM,Consumer Defensive
+PNC,Financial Services
+PNR,Industrials
+PNW,Utilities
+PPG,Basic Materials
+PPL,Utilities
+PRU,Financial Services
+PSX,Energy
+PVH,Consumer Cyclical
+PWR,Industrials
+PX,Financial Services
+PYPL,Financial Services
+QCOM,Technology
+QRVO,Technology
+R,Industrials
+RCL,Consumer Cyclical
+REGN,Healthcare
+RHI,Industrials
+RHT,Error retrieving data
+RL,Consumer Cyclical
+ROK,Industrials
+ROP,Technology
+ROST,Consumer Cyclical
+RRC,Energy
+RSG,Industrials
+SBUX,Consumer Cyclical
+SCG,N/A
+SCHW,Financial Services
+SE,Consumer Cyclical
+SEE,Consumer Cyclical
+SHW,Basic Materials
+SIG,Consumer Cyclical
+SJM,Consumer Defensive
+SLG,Real Estate
+SNA,Industrials
+SNI,N/A
+SO,Utilities
+SPG,Real Estate
+SPGI,Financial Services
+SPLS,N/A
+SRCL,Error retrieving data
+SRE,Utilities
+STI,Industrials
+STT,Financial Services
+STX,Technology
+STZ,Consumer Defensive
+SWK,Industrials
+SWKS,Technology
+SWN,N/A
+SYF,Financial Services
+SYK,Healthcare
+SYMC,Error retrieving data
+SYY,Consumer Defensive
+T,Communication Services
+TAP,Consumer Defensive
+TDC,Technology
+TDG,Industrials
+TEL,Technology
+TGNA,Communication Services
+TGT,Consumer Defensive
+TIF,N/A
+TJX,Consumer Cyclical
+TMK,Error retrieving data
+TMO,Healthcare
+TRIP,Consumer Cyclical
+TRV,Financial Services
+TSCO,Consumer Cyclical
+TSN,Consumer Defensive
+TSO,N/A
+TSS,N/A
+TXN,Technology
+TXT,Industrials
+UA,Consumer Cyclical
+UAA,Consumer Cyclical
+UAL,Industrials
+UDR,Real Estate
+UHS,Healthcare
+ULTA,Consumer Cyclical
+UNH,Healthcare
+UNM,Financial Services
+UNP,Industrials
+UPS,Industrials
+URBN,Consumer Cyclical
+USB,Financial Services
+UTX,N/A
+V,Financial Services
+VAR,N/A
+VFC,Consumer Cyclical
+VIAB,Error retrieving data
+VLO,Energy
+VMC,Basic Materials
+VNO,Real Estate
+VRSK,Industrials
+VRSN,Technology
+VRTX,Healthcare
+VTR,Real Estate
+VZ,Communication Services
+WAT,Healthcare
+WDC,Technology
+WEC,Utilities
+WFC,Financial Services
+WFM,N/A
+WHR,Consumer Cyclical
+WLTW,N/A
+WM,Industrials
+WMB,Energy
+WMT,Consumer Defensive
+WRK,Error retrieving data
+WU,Financial Services
+WY,Real Estate
+WYN,N/A
+WYNN,Consumer Cyclical
+XEC,N/A
+XEL,Utilities
+XL,N/A
+XLNX,N/A
+XOM,Energy
+XRAY,Healthcare
+XRX,Technology
+XYL,Industrials
+YHOO,Error retrieving data
+YUM,Consumer Cyclical
+ZBH,Healthcare
+ZION,Financial Services
+ZTS,Healthcare
