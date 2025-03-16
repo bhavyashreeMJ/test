@@ -1,0 +1,101 @@
+Fund_ID,Fund_Name,Fund_Type,Management_Company,Inception_Date,Size,Risk_Level,Performance_Rating
+1,Fund_1,ETF,Company_1,2011-01-01,100,Medium,2
+2,Fund_2,Hedge Fund,Company_2,2012-01-01,200,Low,3
+3,Fund_3,Mutual Fund,Company_3,2013-01-01,300,High,4
+4,Fund_4,ETF,Company_4,2014-01-01,400,Medium,5
+5,Fund_5,Hedge Fund,Company_5,2015-01-01,500,Low,1
+6,Fund_6,Mutual Fund,Company_6,2016-01-01,600,High,2
+7,Fund_7,ETF,Company_7,2017-01-01,700,Medium,3
+8,Fund_8,Hedge Fund,Company_8,2018-01-01,800,Low,4
+9,Fund_9,Mutual Fund,Company_9,2019-01-01,900,High,5
+10,Fund_10,ETF,Company_0,2010-01-01,1000,Medium,1
+11,Fund_11,Hedge Fund,Company_1,2011-01-01,1100,Low,2
+12,Fund_12,Mutual Fund,Company_2,2012-01-01,1200,High,3
+13,Fund_13,ETF,Company_3,2013-01-01,1300,Medium,4
+14,Fund_14,Hedge Fund,Company_4,2014-01-01,1400,Low,5
+15,Fund_15,Mutual Fund,Company_5,2015-01-01,1500,High,1
+16,Fund_16,ETF,Company_6,2016-01-01,1600,Medium,2
+17,Fund_17,Hedge Fund,Company_7,2017-01-01,1700,Low,3
+18,Fund_18,Mutual Fund,Company_8,2018-01-01,1800,High,4
+19,Fund_19,ETF,Company_9,2019-01-01,1900,Medium,5
+20,Fund_20,Hedge Fund,Company_0,2010-01-01,2000,Low,1
+21,Fund_21,Mutual Fund,Company_1,2011-01-01,2100,High,2
+22,Fund_22,ETF,Company_2,2012-01-01,2200,Medium,3
+23,Fund_23,Hedge Fund,Company_3,2013-01-01,2300,Low,4
+24,Fund_24,Mutual Fund,Company_4,2014-01-01,2400,High,5
+25,Fund_25,ETF,Company_5,2015-01-01,2500,Medium,1
+26,Fund_26,Hedge Fund,Company_6,2016-01-01,2600,Low,2
+27,Fund_27,Mutual Fund,Company_7,2017-01-01,2700,High,3
+28,Fund_28,ETF,Company_8,2018-01-01,2800,Medium,4
+29,Fund_29,Hedge Fund,Company_9,2019-01-01,2900,Low,5
+30,Fund_30,Mutual Fund,Company_0,2010-01-01,3000,High,1
+31,Fund_31,ETF,Company_1,2011-01-01,3100,Medium,2
+32,Fund_32,Hedge Fund,Company_2,2012-01-01,3200,Low,3
+33,Fund_33,Mutual Fund,Company_3,2013-01-01,3300,High,4
+34,Fund_34,ETF,Company_4,2014-01-01,3400,Medium,5
+35,Fund_35,Hedge Fund,Company_5,2015-01-01,3500,Low,1
+36,Fund_36,Mutual Fund,Company_6,2016-01-01,3600,High,2
+37,Fund_37,ETF,Company_7,2017-01-01,3700,Medium,3
+38,Fund_38,Hedge Fund,Company_8,2018-01-01,3800,Low,4
+39,Fund_39,Mutual Fund,Company_9,2019-01-01,3900,High,5
+40,Fund_40,ETF,Company_0,2010-01-01,4000,Medium,1
+41,Fund_41,Hedge Fund,Company_1,2011-01-01,4100,Low,2
+42,Fund_42,Mutual Fund,Company_2,2012-01-01,4200,High,3
+43,Fund_43,ETF,Company_3,2013-01-01,4300,Medium,4
+44,Fund_44,Hedge Fund,Company_4,2014-01-01,4400,Low,5
+45,Fund_45,Mutual Fund,Company_5,2015-01-01,4500,High,1
+46,Fund_46,ETF,Company_6,2016-01-01,4600,Medium,2
+47,Fund_47,Hedge Fund,Company_7,2017-01-01,4700,Low,3
+48,Fund_48,Mutual Fund,Company_8,2018-01-01,4800,High,4
+49,Fund_49,ETF,Company_9,2019-01-01,4900,Medium,5
+50,Fund_50,Hedge Fund,Company_0,2010-01-01,5000,Low,1
+51,Fund_51,Mutual Fund,Company_1,2011-01-01,5100,High,2
+52,Fund_52,ETF,Company_2,2012-01-01,5200,Medium,3
+53,Fund_53,Hedge Fund,Company_3,2013-01-01,5300,Low,4
+54,Fund_54,Mutual Fund,Company_4,2014-01-01,5400,High,5
+55,Fund_55,ETF,Company_5,2015-01-01,5500,Medium,1
+56,Fund_56,Hedge Fund,Company_6,2016-01-01,5600,Low,2
+57,Fund_57,Mutual Fund,Company_7,2017-01-01,5700,High,3
+58,Fund_58,ETF,Company_8,2018-01-01,5800,Medium,4
+59,Fund_59,Hedge Fund,Company_9,2019-01-01,5900,Low,5
+60,Fund_60,Mutual Fund,Company_0,2010-01-01,6000,High,1
+61,Fund_61,ETF,Company_1,2011-01-01,6100,Medium,2
+62,Fund_62,Hedge Fund,Company_2,2012-01-01,6200,Low,3
+63,Fund_63,Mutual Fund,Company_3,2013-01-01,6300,High,4
+64,Fund_64,ETF,Company_4,2014-01-01,6400,Medium,5
+65,Fund_65,Hedge Fund,Company_5,2015-01-01,6500,Low,1
+66,Fund_66,Mutual Fund,Company_6,2016-01-01,6600,High,2
+67,Fund_67,ETF,Company_7,2017-01-01,6700,Medium,3
+68,Fund_68,Hedge Fund,Company_8,2018-01-01,6800,Low,4
+69,Fund_69,Mutual Fund,Company_9,2019-01-01,6900,High,5
+70,Fund_70,ETF,Company_0,2010-01-01,7000,Medium,1
+71,Fund_71,Hedge Fund,Company_1,2011-01-01,7100,Low,2
+72,Fund_72,Mutual Fund,Company_2,2012-01-01,7200,High,3
+73,Fund_73,ETF,Company_3,2013-01-01,7300,Medium,4
+74,Fund_74,Hedge Fund,Company_4,2014-01-01,7400,Low,5
+75,Fund_75,Mutual Fund,Company_5,2015-01-01,7500,High,1
+76,Fund_76,ETF,Company_6,2016-01-01,7600,Medium,2
+77,Fund_77,Hedge Fund,Company_7,2017-01-01,7700,Low,3
+78,Fund_78,Mutual Fund,Company_8,2018-01-01,7800,High,4
+79,Fund_79,ETF,Company_9,2019-01-01,7900,Medium,5
+80,Fund_80,Hedge Fund,Company_0,2010-01-01,8000,Low,1
+81,Fund_81,Mutual Fund,Company_1,2011-01-01,8100,High,2
+82,Fund_82,ETF,Company_2,2012-01-01,8200,Medium,3
+83,Fund_83,Hedge Fund,Company_3,2013-01-01,8300,Low,4
+84,Fund_84,Mutual Fund,Company_4,2014-01-01,8400,High,5
+85,Fund_85,ETF,Company_5,2015-01-01,8500,Medium,1
+86,Fund_86,Hedge Fund,Company_6,2016-01-01,8600,Low,2
+87,Fund_87,Mutual Fund,Company_7,2017-01-01,8700,High,3
+88,Fund_88,ETF,Company_8,2018-01-01,8800,Medium,4
+89,Fund_89,Hedge Fund,Company_9,2019-01-01,8900,Low,5
+90,Fund_90,Mutual Fund,Company_0,2010-01-01,9000,High,1
+91,Fund_91,ETF,Company_1,2011-01-01,9100,Medium,2
+92,Fund_92,Hedge Fund,Company_2,2012-01-01,9200,Low,3
+93,Fund_93,Mutual Fund,Company_3,2013-01-01,9300,High,4
+94,Fund_94,ETF,Company_4,2014-01-01,9400,Medium,5
+95,Fund_95,Hedge Fund,Company_5,2015-01-01,9500,Low,1
+96,Fund_96,Mutual Fund,Company_6,2016-01-01,9600,High,2
+97,Fund_97,ETF,Company_7,2017-01-01,9700,Medium,3
+98,Fund_98,Hedge Fund,Company_8,2018-01-01,9800,Low,4
+99,Fund_99,Mutual Fund,Company_9,2019-01-01,9900,High,5
+100,Fund_100,ETF,Company_0,2010-01-01,10000,Medium,1
