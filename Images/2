@@ -1,0 +1,76 @@
+ALTER PROCEDURE UpdateJSONDataCatRecord
+    @ActionType NVARCHAR(10),  -- 'NEW', 'COR', 'DEL'
+    @FirmRoeID NVARCHAR(50),
+    @JsonData varchar(max),
+    @RecordType NVARCHAR(10)  -- Record type
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    DECLARE @OrderedJson VARCHAR(MAX) = '{}';
+
+    IF @RecordType = 'MECR'
+    BEGIN
+        -- Repeat similar construction for MECR as previously described
+    END
+    ELSE IF @RecordType = 'MENO'
+    BEGIN
+        -- Repeat similar construction for MENO as previously described
+    END
+    ELSE IF @RecordType = 'MEOC'
+    BEGIN
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.actionType', JSON_VALUE(@JsonData, '$.actionType'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.firmROEID', JSON_VALUE(@JsonData, '$.firmROEID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.type', JSON_VALUE(@JsonData, '$.type'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.CATReporterIMID', JSON_VALUE(@JsonData, '$.CATReporterIMID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.orderKeyDate', JSON_VALUE(@JsonData, '$.orderKeyDate'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.orderID', JSON_VALUE(@JsonData, '$.orderID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.symbol', JSON_VALUE(@JsonData, '$.symbol'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.eventTimestamp', JSON_VALUE(@JsonData, '$.eventTimestamp'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.manualFlag', JSON_VALUE(@JsonData, '$.manualFlag'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.electronicTimestamp', JSON_VALUE(@JsonData, '$.electronicTimestamp'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.cancelQty', JSON_VALUE(@JsonData, '$.cancelQty'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.leavesQty', JSON_VALUE(@JsonData, '$.leavesQty'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.initiator', JSON_VALUE(@JsonData, '$.initiator'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.requestTimestamp', JSON_VALUE(@JsonData, '$.requestTimestamp'));
+    END
+    ELSE IF @RecordType = 'MEOCR'
+    BEGIN
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.actionType', JSON_VALUE(@JsonData, '$.actionType'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.firmROEID', JSON_VALUE(@JsonData, '$.firmROEID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.type', JSON_VALUE(@JsonData, '$.type'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.CATReporterIMID', JSON_VALUE(@JsonData, '$.CATReporterIMID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.orderKeyDate', JSON_VALUE(@JsonData, '$.orderKeyDate'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.orderID', JSON_VALUE(@JsonData, '$.orderID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.symbol', JSON_VALUE(@JsonData, '$.symbol'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.eventTimestamp', JSON_VALUE(@JsonData, '$.eventTimestamp'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.manualFlag', JSON_VALUE(@JsonData, '$.manualFlag'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.electronicTimestamp', JSON_VALUE(@JsonData, '$.electronicTimestamp'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.cancelQty', JSON_VALUE(@JsonData, '$.cancelQty'));
+    END
+    ELSE IF @RecordType = 'MEOR'
+    BEGIN
+        -- Similar steps as above, tailored for MEOR with all respective fields
+    END
+    ELSE IF @RecordType = 'MEORS'
+    BEGIN
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.actionType', JSON_VALUE(@JsonData, '$.actionType'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.firmROEID', JSON_VALUE(@JsonData, '$.firmROEID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.type', JSON_VALUE(@JsonData, '$.type'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.CATReporterIMID', JSON_VALUE(@JsonData, '$.CATReporterIMID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.orderKeyDate', JSON_VALUE(@JsonData, '$.orderKeyDate'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.orderID', JSON_VALUE(@JsonData, '$.orderID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.symbol', JSON_VALUE(@JsonData, '$.symbol'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.eventTimestamp', JSON_VALUE(@JsonData, '$.eventTimestamp'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.manualFlag', JSON_VALUE(@JsonData, '$.manualFlag'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.senderIMID', JSON_VALUE(@JsonData, '$.senderIMID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.destination', JSON_VALUE(@JsonData, '$.destination'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.destinationType', JSON_VALUE(@JsonData, '$.destinationType'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.routedOrderID', JSON_VALUE(@JsonData, '$.routedOrderID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.routeRejectedFlag', JSON_VALUE(@JsonData, '$.routeRejectedFlag'));
+    END
+
+    UPDATE BGWM_cat_report_backup
+    SET ReportedRecord = @OrderedJson
+    WHERE ActionType = @ActionType AND FirmRoeID = @FirmRoeID;
+END;
