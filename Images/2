@@ -74,3 +74,36 @@ BEGIN
     SET ReportedRecord = @OrderedJson
     WHERE ActionType = @ActionType AND FirmRoeID = @FirmRoeID;
 END;
+
+
+
+
+ SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.actionType', JSON_VALUE(@JsonData, '$.actionType'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.firmROEID', JSON_VALUE(@JsonData, '$.firmROEID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.type', JSON_VALUE(@JsonData, '$.type'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.CATReporterIMID', JSON_VALUE(@JsonData, '$.CATReporterIMID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.orderKeyDate', JSON_VALUE(@JsonData, '$.orderKeyDate'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.orderID', JSON_VALUE(@JsonData, '$.orderID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.symbol', JSON_VALUE(@JsonData, '$.symbol'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.eventTimestamp', JSON_VALUE(@JsonData, '$.eventTimestamp'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.manualFlag', JSON_VALUE(@JsonData, '$.manualFlag'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.electronicDupFlag', JSON_VALUE(@JsonData, '$.electronicDupFlag'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.senderIMID', JSON_VALUE(@JsonData, '$.senderIMID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.destination', JSON_VALUE(@JsonData, '$.destination'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.destinationType', JSON_VALUE(@JsonData, '$.destinationType'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.routedOrderID', JSON_VALUE(@JsonData, '$.routedOrderID'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.side', JSON_VALUE(@JsonData, '$.side'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.price', JSON_VALUE(@JsonData, '$.price'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.quantity', JSON_VALUE(@JsonData, '$.quantity'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.orderType', JSON_VALUE(@JsonData, '$.orderType'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.timeInForce', JSON_VALUE(@JsonData, '$.timeInForce'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.tradingSession', JSON_VALUE(@JsonData, '$.tradingSession'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.affiliateFlag', JSON_VALUE(@JsonData, '$.affiliateFlag'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.isoInd', JSON_VALUE(@JsonData, '$.isoInd'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.routeRejectedFlag', JSON_VALUE(@JsonData, '$.routeRejectedFlag'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.dupROIDCond', JSON_VALUE(@JsonData, '$.dupROIDCond'));
+        SET @OrderedJson = JSON_MODIFY(@OrderedJson, '$.multiLegInd', JSON_VALUE(@JsonData, '$.multiLegInd'));
+    END
+
+
+
